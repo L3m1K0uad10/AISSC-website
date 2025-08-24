@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body class="bg-white font-sans">
+    <div class="flex flex-col items-center min-h-screen py-10 bg-gradient-to-b from-[#f0f4f8] to-white">
+
+      <!-- Hero Section -->
+      <div class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-[#111518]">Start Your Application</h1>
+        <p class="text-gray-600 mt-2">Fill out your details and submit the required documents to begin your journey</p>
+        <img src="/assets/vector-illustration.png" alt="Students illustration" class="mx-auto mt-4 w-40">
+      </div>
+
+      <div class="w-full max-w-2xl">
+
+        <!-- Step Progress -->
+        <div class="flex justify-center gap-4 mb-6">
+          <div class="step w-6 h-6 rounded-full bg-blue-500 text-white flex items-center justify-center">1</div>
+          <div class="step w-6 h-6 rounded-full bg-gray-300 text-white flex items-center justify-center">2</div>
+          <div class="step w-6 h-6 rounded-full bg-gray-300 text-white flex items-center justify-center">3</div>
+        </div>
+
+        <h4 id="formStepTitle" class="text-center text-lg font-medium mb-4">Personal Details</h4>
+
+        <!-- Form container -->
+        <form id="multiStepForm" class="relative">
+
+          <!-- Step 1 -->
+          <div class="form-step block bg-white shadow-lg rounded-xl p-8 mb-6">
+            <div class="flex flex-col items-center gap-4">
+              <div class="flex items-center gap-3 w-3/4">
+                <input type="text" placeholder="Full Name" class="w-full rounded-lg p-3 bg-[#f0f3f5]" />
+              </div>
+              <div class="flex items-center gap-3 w-3/4">
+                <input type="email" placeholder="Email" class="w-full rounded-lg p-3 bg-[#f0f3f5]" />
+              </div>
+              <div class="flex items-center gap-3 w-3/4">
+                <input type="tel" placeholder="Phone Number" class="w-full rounded-lg p-3 bg-[#f0f3f5]" />
+              </div>
+              <input type="file" accept="image/png, image/jpeg" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
+              <p class="text-sm text-gray-600">Upload a recent passport-sized photo. (JPG, PNG)</p>
+              <button type="button" class="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:scale-105 transition" onclick="nextStep()">Continue</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step hidden bg-white shadow-lg rounded-xl p-8 mb-6">
+            <div class="flex flex-col items-center gap-4">
+              <select class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]">
+                <option>Desired Course</option>
+                <option>Engineering</option>
+                <option>Business</option>
+                <option>Medicine</option>
+              </select>
+              <select class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]">
+                <option>Preferred University (optional)</option>
+                <option>Delhi University</option>
+                <option>IIT Bombay</option>
+                <option>Manipal University</option>
+              </select>
+              <p class="text-sm text-gray-600">Not sure which university to choose? We can help!</p>
+
+              <div class="flex gap-4">
+                <button type="button" class="bg-gray-400 text-white font-bold py-2 px-6 rounded-lg hover:scale-105 transition" onclick="prevStep()">Back</button>
+                <button type="button" class="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:scale-105 transition" onclick="nextStep()">Continue</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="form-step hidden bg-white shadow-lg rounded-xl p-8 mb-6">
+            <div class="flex flex-col items-center gap-4">
+              <input type="file" accept=".pdf,.jpg,.png" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
+              <p class="text-sm text-gray-600">Upload your academic transcripts. (PDF, JPG, PNG)</p>
+
+              <input type="file" accept=".pdf,.jpg,.png" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
+              <p class="text-sm text-gray-600">Upload your highest qualification certificate. (PDF, JPG, PNG)</p>
+
+              <input type="file" accept=".pdf,.jpg,.png" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
+              <p class="text-sm text-gray-600">Upload a copy of your passport or national ID. (PDF, JPG, PNG)</p>
+
+              <div class="flex gap-4">
+                <button type="button" class="bg-gray-400 text-white font-bold py-2 px-6 rounded-lg hover:scale-105 transition" onclick="prevStep()">Back</button>
+                <button type="submit" class="bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:scale-105 transition">Submit Application</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+    <script>
+      let currentStep = 0;
+      const steps = document.querySelectorAll(".form-step");
+      const progressSteps = document.querySelectorAll(".step");
+      
+      const stepTitles = [
+        "Personal Details",
+        "Course & University Selection",
+        "Document Upload"
+      ];
+
+
+      function showStep(step) {
+        steps.forEach((el, index) => {
+          el.classList.toggle("hidden", index !== step);
+        });
+        progressSteps.forEach((el, index) => {
+          el.classList.toggle("bg-blue-500", index === step);
+          el.classList.toggle("bg-gray-300", index !== step);
+        });
+
+        // Update the title
+        document.getElementById("formStepTitle").textContent = stepTitles[step];
+      }
+
+      function nextStep() {
+        if (currentStep < steps.length - 1) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 0) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      }
+
+      // Initialize
+      showStep(currentStep);
+    </script>
+  </body>
+</html>
