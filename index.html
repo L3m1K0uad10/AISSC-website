@@ -1,41 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Public+Sans%3Awght%40400%3B500%3B700%3B900&display=swap"
     />
-
     <title>(AISSC) Africa International Students Service Center</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      // Function to toggle the mobile menu
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      }
+    </script>
   </head>
   <body>
     <div class="relative overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
       <div class="layout-container">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-4 py-3 sm:px-10 lg:px-10">
           <div class="flex items-center gap-4 text-[#111418]">
             <div class="size-4">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
-                  fill="currentColor"
-                ></path>
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z"
-                  fill="currentColor"
-                ></path>
+                <path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+               <path fill-rule="evenodd" clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor"></path>
               </svg>
             </div>
             <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">AISSC</h2>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
+          <div class="hidden flex-1 justify-end gap-8 sm:flex">
             <div class="flex items-center gap-9">
               <a class="text-[#111418] text-sm font-medium leading-normal" href="/index.html">Home</a>
               <a class="text-[#111418] text-sm font-medium leading-normal" href="/unisandcourses.html">Universities/Courses</a>
@@ -49,9 +43,31 @@
               <span class="truncate">Apply Now</span>
             </button>
           </div>
+          <div class="sm:hidden flex items-center">
+            <button onclick="toggleMobileMenu()" class="text-[#111418]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+          </div>
         </header>
+
+        <div id="mobile-menu" class="hidden sm:hidden bg-white border-b border-solid border-b-[#f0f2f5] py-2">
+            <div class="flex flex-col items-center gap-4">
+              <a class="text-[#111418] text-sm font-medium leading-normal py-2" href="/index.html">Home</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal py-2" href="/unisandcourses.html">Universities/Courses</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal py-2" href="/aboutuspage.html">About Us</a>
+              <a class="text-[#111418] text-sm font-medium leading-normal py-2" href="#footer">Contact</a>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                onclick="window.location.href='contactusapplication.html'"
+              >
+                <span class="truncate">Apply Now</span>
+              </button>
+            </div>
+        </div>
         
-        <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="px-4 flex flex-1 justify-center py-5 sm:px-10 lg:px-40">
             <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
                 <div class="@container">
                     <div class="@[480px]:p-4">
@@ -89,7 +105,7 @@
             </div>
         </div>
 
-        <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="px-4 flex flex-1 justify-center py-5 sm:px-10 lg:px-40">
           <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
             <div class="flex flex-wrap justify-between gap-3 p-4"><p class="text-[#111418] tracking-light text-[32px] font-bold leading-tight min-w-72">Who We Are</p></div>
             <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
@@ -103,48 +119,35 @@
                      class="max-w-full h-auto rounded-lg" />
               </div>
             </div>            
-            <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">
-              Our mission is to empower African students to achieve their academic and career goals by facilitating access to quality education in India. We believe that education
-              is a powerful catalyst for personal and societal transformation, and we are passionate about helping students unlock their full potential. We offer a comprehensive
-              suite of services, including university selection, application assistance, visa guidance, pre-departure orientation, and ongoing support during their studies in
-              India. Our team of experienced counselors provides personalized guidance tailored to each student's individual needs and aspirations. We are committed to
-              transparency, integrity, and ethical practices in all our interactions. We strive to build long-lasting relationships with our students, providing them with the
-              support and resources they need to thrive in their academic pursuits.
-            </p>
+            <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4">Our mission is to empower African students to achieve their academic and career goals by facilitating access to quality education in India. We believe that education is a powerful catalyst for personal and societal transformation, and we are passionate about helping students unlock their full potential. We offer a comprehensive suite of services, including university selection, application assistance, visa guidance, pre-departure orientation, and ongoing support during their studies in India. Our team of experienced counselors provides personalized guidance tailored to each student's individual needs and aspirations. We are committed to transparency, integrity, and ethical practices in all our interactions. We strive to build long-lasting relationships with our students, providing them with the support and resources they need to thrive in their academic pursuits.</p>
           </div>
         </div>
 
-        <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="px-4 flex flex-1 justify-center py-5 sm:px-10 lg:px-40">
             <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
                 <h2 class="text-[#111418] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">What We Offer</h2>
-                <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-3 p-4">
                 <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
                     <div class="text-[#111418]" data-icon="GraduationCap" data-size="24px" data-weight="regular">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                        d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"
-                        ></path>
+                        <path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path>
                     </svg>
                     </div>
                     <div class="flex flex-col gap-1">
                     <h2 class="text-[#0d80f2] text-base font-bold leading-tight">University & Course Guidance</h2>
-                    <p class="text-[#60758a] text-sm font-normal leading-normal">
-                        Expert advice on selecting the right university and course based on your academic background and career goals.
+                    <p class="text-[#60758a] text-sm font-normal leading-normal">Expert advice on selecting the right university and course based on your academic background and career goals.
                     </p>
                     </div>
                 </div>
                 <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
                     <div class="text-[#111418]" data-icon="File" data-size="24px" data-weight="regular">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                        d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z"
-                        ></path>
+                        <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z"></path>
                     </svg>
                     </div>
                     <div class="flex flex-col gap-1">
                     <h2 class="text-[#0d80f2] text-base font-bold leading-tight">Admission Application Support</h2>
-                    <p class="text-[#60758a] text-sm font-normal leading-normal">
-                        Comprehensive support throughout the application process, from document preparation to submission.
+                    <p class="text-[#60758a] text-sm font-normal leading-normal">Comprehensive support throughout the application process, from document preparation to submission.
                     </p>
                     </div>
                 </div>
@@ -152,8 +155,7 @@
                     <div class="text-[#111418]" data-icon="IdentificationCard" data-size="24px" data-weight="regular">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
                         <path
-                        d="M200,112a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h40A8,8,0,0,1,200,112Zm-8,24H152a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm40-80V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56ZM216,200V56H40V200H216Zm-80.26-34a8,8,0,1,1-15.5,4c-2.63-10.26-13.06-18-24.25-18s-21.61,7.74-24.25,18a8,8,0,1,1-15.5-4,39.84,39.84,0,0,1,17.19-23.34,32,32,0,1,1,45.12,0A39.76,39.76,0,0,1,135.75,166ZM96,136a16,16,0,1,0-16-16A16,16,0,0,0,96,136Z"
-                        ></path>
+                        d="M200,112a8,8,0,0,1-8,8H152a8,8,0,0,1,0-16h40A8,8,0,0,1,200,112Zm-8,24H152a8,8,0,0,0,0,16h40a8,8,0,0,0,0-16Zm40-80V200a16,16,0,0,1-16,16H40a16,16,0,0,1-16-16V56A16,16,0,0,1,40,40H216A16,16,0,0,1,232,56ZM216,200V56H40V200H216Zm-80.26-34a8,8,0,1,1-15.5,4c-2.63-10.26-13.06-18-24.25-18s-21.61,7.74-24.25,18a8,8,0,1,1-15.5-4,39.84,39.84,0,0,1,17.19-23.34,32,32,0,1,1,45.12,0A39.76,39.76,0,0,1,135.75,166ZM96,136a16,16,0,1,0-16-16A16,16,0,0,0,96,136Z"></path>
                     </svg>
                     </div>
                     <div class="flex flex-col gap-1">
@@ -164,22 +166,18 @@
                 <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
                     <div class="text-[#111418]" data-icon="Airplane" data-size="24px" data-weight="regular">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-                        <path
-                        d="M235.58,128.84,160,91.06V48a32,32,0,0,0-64,0V91.06L20.42,128.84A8,8,0,0,0,16,136v32a8,8,0,0,0,9.57,7.84L96,161.76v18.93L82.34,194.34A8,8,0,0,0,80,200v32a8,8,0,0,0,11,7.43l37-14.81,37,14.81A8,8,0,0,0,176,232V200a8,8,0,0,0-2.34-5.66L160,180.69V161.76l70.43,14.08A8,8,0,0,0,240,168V136A8,8,0,0,0,235.58,128.84ZM224,158.24l-70.43-14.08A8,8,0,0,0,144,152v32a8,8,0,0,0,2.34,5.66L160,203.31v16.87l-29-11.61a8,8,0,0,0-5.94,0L96,220.18V203.31l13.66-13.65A8,8,0,0,0,112,184V152a8,8,0,0,0-9.57-7.84L32,158.24v-17.3l75.58-37.78A8,8,0,0,0,112,96V48a16,16,0,0,1,32,0V96a8,8,0,0,0,4.42,7.16L224,140.94Z"
-                        ></path>
+                        <path d="M235.58,128.84,160,91.06V48a32,32,0,0,0-64,0V91.06L20.42,128.84A8,8,0,0,0,16,136v32a8,8,0,0,0,9.57,7.84L96,161.76v18.93L82.34,194.34A8,8,0,0,0,80,200v32a8,8,0,0,0,11,7.43l37-14.81,37,14.81A8,8,0,0,0,176,232V200a8,8,0,0,0-2.34-5.66L160,180.69V161.76l70.43,14.08A8,8,0,0,0,240,168V136A8,8,0,0,0,235.58,128.84ZM224,158.24l-70.43-14.08A8,8,0,0,0,144,152v32a8,8,0,0,0,2.34,5.66L160,203.31v16.87l-29-11.61a8,8,0,0,0-5.94,0L96,220.18V203.31l13.66-13.65A8,8,0,0,0,112,184V152a8,8,0,0,0-9.57-7.84L32,158.24v-17.3l75.58-37.78A8,8,0,0,0,112,96V48a16,16,0,0,1,32,0V96a8,8,0,0,0,4.42,7.16L224,140.94Z"></path>
                     </svg>
                     </div>
                     <div class="flex flex-col gap-1">
                     <h2 class="text-[#0d80f2] text-base font-bold leading-tight">Arrival & Welcome in India</h2>
-                    <p class="text-[#60758a] text-sm font-normal leading-normal">
-                        Support upon arrival in India, including airport pickup, accommodation assistance, and orientation.
-                    </p>
+                    <p class="text-[#60758a] text-sm font-normal leading-normal">Support upon arrival in India, including airport pickup, accommodation assistance, and orientation.</p>
                     </div>
                 </div>
                 </div>
             </div>
         </div>
-        <div class="flex px-4 py-3 justify-center">
+        <div class="flex px-4 py-3 justify-center sm:px-10 lg:px-40">
             <button
               class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
               onclick="window.location.href='unisandcourses.html'"
@@ -188,11 +186,10 @@
             </button>
         </div>
 
-
-        <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="px-4 flex flex-1 justify-center py-5 sm:px-10 lg:px-40">
             <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
                 <h2 class="text-[#111418] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">How it works</h2>
-                <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-4">
                 <div class="flex flex-1 gap-3 rounded-lg border border-[#dbe0e6] bg-white p-4 flex-col">
                     <div class="text-[#111418]" data-icon="PencilSimple" data-size="24px" data-weight="regular">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
@@ -248,7 +245,7 @@
                 </div>
             </div>
         </div>
-        <div class="flex px-4 py-3 justify-center">
+        <div class="flex px-4 py-3 justify-center sm:px-10 lg:px-40">
             <button
               class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
               onclick="window.location.href='contactusapplication.html'"
@@ -257,15 +254,14 @@
             </button>
         </div>
 
-
-        <div class="px-40 flex flex-1 justify-center py-5">
+        <div class="px-4 flex flex-1 justify-center py-5 sm:px-10 lg:px-40">
             <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
                 <h2 class="text-[#111418] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Testimonials</h2>
                 <p class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4 text-center">
                 Hear from students who have successfully navigated their academic journey with us.
                 </p>
                 <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                <div class="flex items-stretch p-4 gap-3">
+                <div class="flex flex-col lg:flex-row items-stretch p-4 gap-3">
                     <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
                     <div
                         class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
@@ -305,7 +301,7 @@
             </div>
         </div>
 
-        <div class="flex flex-1 justify-center py-5">
+        <div class="px-4 flex flex-1 justify-center py-5 sm:px-10 lg:px-40">
             <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
                 <div class="flex flex-wrap justify-between gap-3 p-4">
                     <p class="text-[#111418] tracking-light text-[28px] font-bold leading-tight min-w-72">Frequently Asked Questions</p>
@@ -355,18 +351,15 @@
             </details>
         </div>
     </div>
+    </div>
 
     <footer class="flex justify-center w-full" style="background-color: #0d80f2;" id = "footer">
       <div class="flex max-w-[960px] flex-1 flex-col">
-        <div class="flex flex-col items-center justify-between h-full px-5 py-10 text-center @container gap-6">
-          
-          <!-- Links -->
+        <div class="flex flex-col items-center justify-between h-full px-5 py-10 text-center @container gap-6">    
           <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
             <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
             <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
           </div>
-    
-          <!-- Form -->
           <form action="" class="flex flex-col items-center gap-4 w-full">
             <input 
               type="text" 
@@ -384,25 +377,18 @@
               Send
             </button>
           </form>
-
           <div class="flex justify-center gap-6 mt-4 text-white">
             <a href="https://wa.me/1234567890" target="_blank"><i data-feather="message-circle"></i></a>
             <a href="tel:+1234567890"><i data-feather="phone"></i></a>
+            <a href="mailto:example@email.com"><i data-feather="phone"></i></a>
             <a href="mailto:example@email.com"><i data-feather="mail"></i></a>
           </div>
-    
-          <!-- Copyright -->
           <p class="text-white text-base font-normal leading-normal">
-            ©2025 EduConnect. All rights reserved.
+            ©2025 AISSC. All rights reserved.
           </p>
         </div>
       </div>
-    </footer>    
-
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-      feather.replace();
-    </script>
-
+    </footer>
+    </div>
   </body>
 </html>
