@@ -24,13 +24,21 @@ The website provides counseling and guidance for students seeking **university a
 ## 📂 Project Structure
 
 project-root/
+
 │── assets/ # Images, icons, and media
+
 │── css/ # Stylesheets
+
 │── js/ # Scripts
+
 │── index.html # Homepage
+
 │── unisandcourses.html # university and courses page
+
 │── universitydetails.html # university details page
+
 │── contactusapplication.html # interest application page
+
 │── aboutuspage.html # about page
 
 
