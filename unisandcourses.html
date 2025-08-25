@@ -7,6 +7,7 @@
     <title>(AISSC) Africa International Students Service Center</title>
     <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
       // Function to toggle the mobile menu
       function toggleMobileMenu() {
@@ -228,47 +229,48 @@
 
     <footer class="flex justify-center w-full" style="background-color: #0d80f2;" id = "footer">
       <div class="flex max-w-[960px] flex-1 flex-col">
-        <div class="flex flex-col items-center justify-center px-5 py-10 text-center @container gap-6">
-          
+        <div class="flex flex-col items-center justify-between h-full px-5 py-10 text-center @container gap-6">    
           <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
             <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
             <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
           </div>
-    
-          <form action="" class="flex flex-col items-center gap-4 w-full">
+          <form id = "contact-form" action="" class="flex flex-col items-center gap-4 w-full">
             <input 
               type="text" 
-              placeholder="enter your email" 
-              class="w-full max-w-full sm:max-w-[480px] h-10 px-4 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
+              name = "email"
+              placeholder = "enter your email" 
+              class = "w-full max-w-[480px] h-10 px-4 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
+              required
             />
             <textarea 
-              placeholder="email us here..." 
-              class="w-full max-w-full sm:max-w-[480px] h-24 px-4 py-2 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
+              name = "message"
+              placeholder="Your message" 
+              class="w-full max-w-[480px] h-24 px-4 py-2 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
+              required
             ></textarea>
             <button 
               type="submit" 
-              class="w-full max-w-full sm:max-w-[480px] h-10 bg-[#0b6fd1] hover:bg-[#0959a8] text-white font-medium rounded-lg transition"
+              class="w-full max-w-[480px] h-10 bg-[#0b6fd1] hover:bg-[#0959a8] text-white font-medium rounded-lg transition"
             >
               Send
             </button>
           </form>
-
           <div class="flex justify-center gap-6 mt-4 text-white">
             <a href="https://wa.me/1234567890" target="_blank"><i data-feather="message-circle"></i></a>
             <a href="tel:+1234567890"><i data-feather="phone"></i></a>
             <a href="mailto:example@email.com"><i data-feather="mail"></i></a>
           </div>
-    
           <p class="text-white text-base font-normal leading-normal">
-            ©2025 EduConnect. All rights reserved.
+            ©2025 AISSC. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
-    
+    </div>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
       feather.replace();
     </script>
+    <script src="script.js"></script>
   </body>
 </html>

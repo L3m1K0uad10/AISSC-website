@@ -7,6 +7,7 @@
       <title>(AISSC) Africa International Students Service Center</title>
       <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
       <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       <script>
         // Function to toggle the mobile menu
         function toggleMobileMenu() {
@@ -342,15 +343,19 @@
             <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
             <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
           </div>
-          <form action="" class="flex flex-col items-center gap-4 w-full">
+          <form id = "contact-form" action="" class="flex flex-col items-center gap-4 w-full">
             <input 
               type="text" 
-              placeholder="enter your email" 
-              class="w-full max-w-[480px] h-10 px-4 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
+              name = "email"
+              placeholder = "enter your email" 
+              class = "w-full max-w-[480px] h-10 px-4 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
+              required
             />
             <textarea 
-              placeholder="email us here..." 
+              name = "message"
+              placeholder="Your message" 
               class="w-full max-w-[480px] h-24 px-4 py-2 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
+              required
             ></textarea>
             <button 
               type="submit" 
@@ -375,5 +380,6 @@
     <script>
       feather.replace();
     </script>
+    <script src="script.js"></script>
   </body>
 </html>
