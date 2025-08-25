@@ -44,21 +44,21 @@
         <h4 id="formStepTitle" class="text-center text-lg font-medium mb-4">Personal Details</h4>
 
         <!-- Form container -->
-        <form id="multiStepForm" class="relative">
+        <form id="multiStepForm" method="POST" enctype="multipart/form-data">
 
           <!-- Step 1 -->
           <div class="form-step block bg-white shadow-lg rounded-xl p-8 mb-6">
             <div class="flex flex-col items-center gap-4">
               <div class="flex items-center gap-3 w-3/4">
-                <input type="text" placeholder="Full Name" class="w-full rounded-lg p-3 bg-[#f0f3f5]" />
+                <input name = "name" type="text" placeholder="Full Name" class="w-full rounded-lg p-3 bg-[#f0f3f5]" />
               </div>
               <div class="flex items-center gap-3 w-3/4">
-                <input type="email" placeholder="Email" class="w-full rounded-lg p-3 bg-[#f0f3f5]" />
+                <input name = "email" type="email" placeholder="Email" class="w-full rounded-lg p-3 bg-[#f0f3f5]" />
               </div>
               <div class="flex items-center gap-3 w-3/4">
-                <input type="tel" placeholder="Phone Number" class="w-full rounded-lg p-3 bg-[#f0f3f5]" />
+                <input name = "telephone" type="tel" placeholder="Phone Number" class="w-full rounded-lg p-3 bg-[#f0f3f5]" />
               </div>
-              <input type="file" accept="image/png, image/jpeg" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
+              <input name = "photo" type="file" accept="image/png, image/jpeg" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
               <p class="text-sm text-gray-600">Upload a recent passport-sized photo. (JPG, PNG)</p>
               <button type="button" class="bg-blue-500 text-white font-bold py-2 px-6 rounded-lg hover:scale-105 transition" onclick="nextStep()">Continue</button>
             </div>
@@ -67,17 +67,18 @@
           <!-- Step 2 -->
           <div class="form-step hidden bg-white shadow-lg rounded-xl p-8 mb-6">
             <div class="flex flex-col items-center gap-4">
-              <select class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]">
+              <select name = "courses" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]">
                 <option>Desired Course</option>
-                <option>Engineering</option>
-                <option>Business</option>
-                <option>Medicine</option>
+                <option value = "engineering">Engineering</option>
+                <option value = "business">Business</option>
+                <option value = "medecine">Medicine</option>
+                <option value = "architecture">Medicine</option>
               </select>
-              <select class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]">
+              <select name = "universities" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]">
                 <option>Preferred University (optional)</option>
-                <option>Delhi University</option>
-                <option>IIT Bombay</option>
-                <option>Manipal University</option>
+                <option value = "Delhi University">Delhi University</option>
+                <option value = "IIT Bombay">IIT Bombay</option>
+                <option value = "Manipal University">Manipal University</option>
               </select>
               <p class="text-sm text-gray-600">Not sure which university to choose? We can help!</p>
 
@@ -91,13 +92,13 @@
           <!-- Step 3 -->
           <div class="form-step hidden bg-white shadow-lg rounded-xl p-8 mb-6">
             <div class="flex flex-col items-center gap-4">
-              <input type="file" accept=".pdf,.jpg,.png" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
+              <input name = "transcripts" type="file" accept=".pdf,.jpg,.png" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
               <p class="text-sm text-gray-600">Upload your academic transcripts. (PDF, JPG, PNG)</p>
 
-              <input type="file" accept=".pdf,.jpg,.png" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
+              <input name = "degree" type="file" accept=".pdf,.jpg,.png" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
               <p class="text-sm text-gray-600">Upload your highest qualification certificate. (PDF, JPG, PNG)</p>
 
-              <input type="file" accept=".pdf,.jpg,.png" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
+              <input name = "passport" type="file" accept=".pdf,.jpg,.png" class="w-3/4 rounded-lg p-3 bg-[#f0f3f5]" />
               <p class="text-sm text-gray-600">Upload a copy of your passport or national ID. (PDF, JPG, PNG)</p>
 
               <div class="flex gap-4">
@@ -153,5 +154,31 @@
       // Initialize
       showStep(currentStep);
     </script>
+    <script>
+      const form = document.getElementById("multiStepForm");
+      
+      form.addEventListener("submit", function(e) {
+        e.preventDefault(); // Stop default redirect
+        const formData = new FormData(form);
+      
+        fetch("https://lemimkouadio.getform.com/mz3nk", {
+          method: "POST",
+          body: formData,
+        })
+        .then(response => {
+          if (response.ok) {
+            alert("Application submitted successfully!");
+            form.reset(); // Clear the form
+          } else {
+            alert("Something went wrong. Please try again.");
+          }
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          alert("Error submitting form.");
+        });
+      });
+      </script>
+      
   </body>
 </html>
