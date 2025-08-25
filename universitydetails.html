@@ -1,56 +1,72 @@
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link
-      rel="stylesheet"
-      as="style"
-      onload="this.rel='stylesheet'"
-      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
-    />
-
-    <title>(AISSC) Africa International Students Service Center</title>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  </head>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+      <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&family=Public+Sans%3Awght%40400%3B500%3B700%3B900&display=swap"
+      />
+      <title>(AISSC) Africa International Students Service Center</title>
+      <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <script>
+        // Function to toggle the mobile menu
+        function toggleMobileMenu() {
+          const menu = document.getElementById('mobile-menu');
+          menu.classList.toggle('hidden');
+        }
+      </script>
+      </head>
   <body>
     <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
         <div class="layout-container">
-            <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
-                <div class="flex items-center gap-4 text-[#111418]">
-                    <div class="size-4">
-                        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
-                            fill="currentColor"
-                          ></path>
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z"
-                            fill="currentColor"
-                          ></path>
-                        </svg>
-                      </div>
-                      <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">AISSC</h2>
-                    </div>
-                    <div class="flex flex-1 justify-end gap-8">
-                    <div class="flex items-center gap-9">
-                        <a class="text-[#111418] text-sm font-medium leading-normal" href="/index.html">Home</a>
-                        <a class="text-[#111418] text-sm font-medium leading-normal" href="/unisandcourses.html">Universities/Courses</a>
-                        <a class="text-[#111418] text-sm font-medium leading-normal" href="/aboutuspage.html">About Us</a>
-                        <a class="text-[#111418] text-sm font-normal leading-normal" href="#footer">Contact</a>
-                    </div>
-                    <button
-                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
-                        onclick="window.location.href='contactusapplication.html'"
-                    >
-                        <span class="truncate">Apply Now</span>
-                    </button>
-                </div>
-            </header>
+          <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-4 py-3 sm:px-10 lg:px-10">
+            <div class="flex items-center gap-4 text-[#111418]">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z" fill="currentColor"></path>
+                 <path fill-rule="evenodd" clip-rule="evenodd" d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z" fill="currentColor"></path>
+                </svg>
+              </div>
+              <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">AISSC</h2>
+            </div>
+            <div class="hidden flex-1 justify-end gap-8 sm:flex">
+              <div class="flex items-center gap-9">
+                <a class="text-[#111418] text-sm font-medium leading-normal" href="/index.html">Home</a>
+                <a class="text-[#111418] text-sm font-medium leading-normal" href="/unisandcourses.html">Universities/Courses</a>
+                <a class="text-[#111418] text-sm font-medium leading-normal" href="/aboutuspage.html">About Us</a>
+                <a class="text-[#111418] text-sm font-medium leading-normal" href="#footer">Contact</a>
+              </div>
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                onclick="window.location.href='contactusapplication.html'"
+              >
+                <span class="truncate">Apply Now</span>
+              </button>
+            </div>
+            <div class="sm:hidden flex items-center">
+              <button onclick="toggleMobileMenu()" class="text-[#111418]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+              </button>
+            </div>
+          </header>
+  
+          <div id="mobile-menu" class="hidden sm:hidden bg-white border-b border-solid border-b-[#f0f2f5] py-2">
+              <div class="flex flex-col items-center gap-4">
+                <a class="text-[#111418] text-sm font-medium leading-normal py-2" href="/index.html">Home</a>
+                <a class="text-[#111418] text-sm font-medium leading-normal py-2" href="/unisandcourses.html">Universities/Courses</a>
+                <a class="text-[#111418] text-sm font-medium leading-normal py-2" href="/aboutuspage.html">About Us</a>
+                <a class="text-[#111418] text-sm font-medium leading-normal py-2" href="#footer">Contact</a>
+                <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0d80f2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+                  onclick="window.location.href='contactusapplication.html'"
+                >
+                  <span class="truncate">Apply Now</span>
+                </button>
+              </div>
+          </div>
 
-            <div class="px-40 flex flex-1 justify-center py-5">
+            <div class="px-4 sm:px-10 lg:px-40 flex flex-1 justify-center py-5">
             <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
                 <div class="@container">
                 <div class="@[480px]:px-4 @[480px]:py-3">
@@ -61,10 +77,11 @@
                     <div class="flex p-4"><p class="text-white tracking-light text-[28px] font-bold leading-tight">University of Technology, Mumbai</p></div>
                     </div>
                 </div>
+
                 </div>
                 <h2 class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Overview</h2>
                 <div class="p-4">
-                <div class="flex items-stretch justify-between gap-4 rounded-lg">
+                <div class="flex items-stretch justify-between gap-4 rounded-lg sm:flex-row flex-col-reverse sm:flex-nowrap">
                     <div class="flex flex-col gap-1 flex-[2_2_0px]">
                     <p class="text-[#111518] text-base font-bold leading-tight">University of Technology, Mumbai</p>
                     <p class="text-[#60768a] text-sm font-normal leading-normal">
@@ -154,7 +171,7 @@
                     <p class="text-[#60768a] text-sm font-normal leading-normal pb-2"></p>
                 </details>
                 </div>
-                <h2 class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Accommodation &amp; Facilities</h2>
+                <h2 class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Accommodation & Facilities</h2>
                 <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
                 <div class="flex flex-col gap-3 pb-3">
                     <div
@@ -197,6 +214,36 @@
                     </div>
                 </div>
                 </div>
+                <h2 class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Partner Universities</h2>
+                <div class="@[480px]:flex-wrap @container flex flex-row snap-x overflow-x-auto gap-4 p-4">
+                    <div class="w-[70vw] min-w-[280px] snap-start @[480px]:w-auto @[480px]:flex-1 @[480px]:p-0">
+                        <div class="flex h-full flex-col gap-4 rounded-lg">
+                            <div
+                                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnhXGerxjjuA9gcUyCLMgxOzFTQNWigTwX4n5cVMb1M_5_QQCyMLUJ61_ZbQBHmmahmA_-gFef8Mw2CzUXzmfNmtKEd2_IKLDh46g1BAV40FR-pJfshhnp6ymXbIhaI9Y1snTyl4iQgRdijsW34jmJ8jSoPyPY__AuUVRDAcsIz4jkYSzn5Tojz9fNaeQktLUN9hiXER8Zn8_qJZtKUeWgNAi0Tsd4oxVue51xR8pSIES-DP6syxsKrxNclqh3zYKOuIp9bIhsK6Q");'
+                            ></div>
+                            <p class="text-[#111518] text-base font-medium leading-normal">University of Technology, London</p>
+                        </div>
+                    </div>
+                    <div class="w-[70vw] min-w-[280px] snap-start @[480px]:w-auto @[480px]:flex-1 @[480px]:p-0">
+                        <div class="flex h-full flex-col gap-4 rounded-lg">
+                            <div
+                                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASnJSG58P9soCF7x6IQsvgSzaPGBhVJvR-HNuU-42DcZcUAShCsIWcWobtXzG6h7Xrs59JgBO1UTiYaBtmobjF1KiHMIX5F4f_R68Ep4zE6Ec7iRGvPyQh4AXCOPYvZhXMBr6_Tm5tk5P2JIuoJs9wt-XJyvcfivLrAXtVJX39zvnAkkzkRr55zEQnuccDLvIwTkRGQDU0g66FNCxRXJdnA1p4Zc7JuDSUMDudvbMK-FaW1y9_DnpglwciMnX3Ydm0p9re7W-NS7Q");'
+                            ></div>
+                            <p class="text-[#111518] text-base font-medium leading-normal">University of Technology, Sydney</p>
+                        </div>
+                    </div>
+                    <div class="w-[70vw] min-w-[280px] snap-start @[480px]:w-auto @[480px]:flex-1 @[480px]:p-0">
+                        <div class="flex h-full flex-col gap-4 rounded-lg">
+                            <div
+                                class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8Zlu2J1pGJ7aJfzBd1G_AyPzDnnCC1yURjv3JalV6IXI4N16f7GOG9rbwnaklYnUpnwZrY9knQOgUBveKFN9Iy8yu3saW2Wz6eMYfN5qpo8enkmkpGr_Fd1UEbD7oRZv4GoIGCEl1AkVB8eNYNecUKCDuqhg_3O0qdsFkuPkaw8X3bvoIAIicBWPUeEJ3a2WDtmecFylb3AnY3GyA7MzI1dkpPLBsFv2PtyM3tF9AUNH2fR8nPJ7b3q-Muvp6dgVOaeNsn6V6E0w");'
+                            ></div>
+                            <p class="text-[#111518] text-base font-medium leading-normal">University of Technology, Berlin</p>
+                        </div>
+                    </div>
+                    </div>
                 <h2 class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Location</h2>
                 <div class="flex px-4 py-3">
                 <div
@@ -204,32 +251,7 @@
                     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCo4KY-zcgO-wsek-n8HRybNXKMRGHG-mCwKEXLnH-G6BqRaXf3dvhEKQVeU9lajy7F4iIv_lDxe0ZqiB9EUYKVCqC6v5I0bQj7f4VhumcgkY27Gz88AwwvwAey4miXSEiunTVg_k8OC5axbkBpg2TF9Pjr57eKLIq6KEEZwXAVwQtihtDU_CQe00YMwlyRVKhx3Xl_hI0C1ujSx8kT5lW1L7XGGhJpBE08gmBy3BFXbe1w_zbLbNMIkDaBhlGkgaHWCQljsooJEus");'
                 ></div>
                 </div>
-                <h2 class="text-[#111518] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Partner Universities</h2>
-                <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-                <div class="flex items-stretch p-4 gap-3">
-                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
-                    <div
-                        class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnhXGerxjjuA9gcUyCLMgxOzFTQNWigTwX4n5cVMb1M_5_QQCyMLUJ61_ZbQBHmmahmA_-gFef8Mw2CzUXzmfNmtKEd2_IKLDh46g1BAV40FR-pJfshhnp6ymXbIhaI9Y1snTyl4iQgRdijsW34jmJ8jSoPyPY__AuUVRDAcsIz4jkYSzn5Tojz9fNaeQktLUN9hiXER8Zn8_qJZtKUeWgNAi0Tsd4oxVue51xR8pSIES-DP6syxsKrxNclqh3zYKOuIp9bIhsK6Q");'
-                    ></div>
-                    <p class="text-[#111518] text-base font-medium leading-normal">University of Technology, London</p>
-                    </div>
-                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
-                    <div
-                        class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASnJSG58P9soCF7x6IQsvgSzaPGBhVJvR-HNuU-42DcZcUAShCsIWcWobtXzG6h7Xrs59JgBO1UTiYaBtmobjF1KiHMIX5F4f_R68Ep4zE6Ec7iRGvPyQh4AXCOPYvZhXMBr6_Tm5tk5P2JIuoJs9wt-XJyvcfivLrAXtVJX39zvnAkkzkRr55zEQnuccDLvIwTkRGQDU0g66FNCxRXJdnA1p4Zc7JuDSUMDudvbMK-FaW1y9_DnpglwciMnX3Ydm0p9re7W-NS7Q");'
-                    ></div>
-                    <p class="text-[#111518] text-base font-medium leading-normal">University of Technology, Sydney</p>
-                    </div>
-                    <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-40">
-                    <div
-                        class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex flex-col"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8Zlu2J1pGJ7aJfzBd1G_AyPzDnnCC1yURjv3JalV6IXI4N16f7GOG9rbwnaklYnUpnwZrY9knQOgUBveKFN9Iy8yu3saW2Wz6eMYfN5qpo8enkmkpGr_Fd1UEbD7oRZv4GoIGCEl1AkVB8eNYNecUKCDuqhg_3O0qdsFkuPkaw8X3bvoIAIicBWPUeEJ3a2WDtmecFylb3AnY3GyA7MzI1dkpPLBsFv2PtyM3tF9AUNH2fR8nPJ7b3q-Muvp6dgVOaeNsn6V6E0w");'
-                    ></div>
-                    <p class="text-[#111518] text-base font-medium leading-normal">University of Technology, Berlin</p>
-                    </div>
-                </div>
-                </div>
+
                 <div class="@container">
                 <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
                     <div class="flex flex-col gap-2 text-center">
@@ -244,6 +266,7 @@
                         <div class="flex flex-1 gap-3 flex-wrap max-w-[480px] justify-center">
                         <button
                             class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#0a83f5] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
+                            onclick="window.location.href='contactusapplication.html'"
                         >
                             <span class="truncate">Apply Now</span>
                         </button>
@@ -260,105 +283,97 @@
             </div>
             </div>
 
-            <div class="flex flex-1 justify-center py-5">
-                <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-                    <div class="flex flex-wrap justify-between gap-3 p-4">
-                        <p class="text-[#111418] tracking-light text-[28px] font-bold leading-tight min-w-72">Frequently Asked Questions</p>
-                    </div>
-                <div class="flex flex-col p-4 gap-3">
-                <details class="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group">
-                    <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
-                    <p class="text-[#111418] text-sm font-medium leading-normal">Are there any language requirements for admission?</p>
-                    <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                        <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                        </svg>
-                    </div>
-                    </summary>
-                    <p class="text-[#60728a] text-sm font-normal leading-normal pb-2">
-                    Most Indian universities require proficiency in English, often demonstrated through standardized tests like TOEFL or IELTS. Specific requirements vary by
-                    institution and program. We can help you identify programs that match your language skills.
-                    </p>
-                </details>
-                <details class="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group">
-                    <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
-                    <p class="text-[#111418] text-sm font-medium leading-normal">How long does the admission process typically take?</p>
-                    <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                        <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                        </svg>
-                    </div>
-                    </summary>
-                    <p class="text-[#60728a] text-sm font-normal leading-normal pb-2">
-                    Most Indian universities require proficiency in English, often demonstrated through standardized tests like TOEFL or IELTS. Specific requirements vary by
-                    institution and program. We can help you identify programs that match your language skills.
-                    </p>
-                </details>
-                <details class="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group">
-                    <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
-                    <p class="text-[#111418] text-sm font-medium leading-normal">What kind of accommodation support is available?</p>
-                    <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
-                        <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-                        </svg>
-                    </div>
-                    </summary>
-                    <p class="text-[#60728a] text-sm font-normal leading-normal pb-2">
-                    Most Indian universities require proficiency in English, often demonstrated through standardized tests like TOEFL or IELTS. Specific requirements vary by
-                    institution and program. We can help you identify programs that match your language skills.
-                    </p>
-                </details>
-            </div>
-        </div>
-
-        <footer class="flex justify-center w-full" style="background-color: #0d80f2;" id = "footer">
-            <div class="flex max-w-[960px] flex-1 flex-col">
-              <div class="flex flex-col items-center justify-between h-full px-5 py-10 text-center @container gap-6">
-                
-                <!-- Links -->
-                <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                  <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
-                  <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+            <div class="px-4 flex flex-1 justify-center py-5 sm:px-10 lg:px-40">
+            <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                <div class="flex flex-wrap justify-between gap-3 p-4">
+                    <p class="text-[#111418] tracking-light text-[28px] font-bold leading-tight min-w-72">Frequently Asked Questions</p>
                 </div>
-          
-                <!-- Form -->
-                <form action="" class="flex flex-col items-center gap-4 w-full">
-                  <input 
-                    type="text" 
-                    placeholder="enter your email" 
-                    class="w-full max-w-[480px] h-10 px-4 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
-                  />
-                  <textarea 
-                    placeholder="email us here..." 
-                    class="w-full max-w-[480px] h-24 px-4 py-2 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
-                  ></textarea>
-                  <button 
-                    type="submit" 
-                    class="w-full max-w-[480px] h-10 bg-[#0b6fd1] hover:bg-[#0959a8] text-white font-medium rounded-lg transition"
-                  >
-                    Send
-                  </button>
-                </form>
-      
-                <div class="flex justify-center gap-6 mt-4 text-white">
-                  <a href="https://wa.me/1234567890" target="_blank"><i data-feather="message-circle"></i></a>
-                  <a href="tel:+1234567890"><i data-feather="phone"></i></a>
-                  <a href="mailto:example@email.com"><i data-feather="mail"></i></a>
+            <div class="flex flex-col p-4 gap-3">
+            <details class="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                <p class="text-[#111418] text-sm font-medium leading-normal">Are there any language requirements for admission?</p>
+                <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
                 </div>
-          
-                <!-- Copyright -->
-                <p class="text-white text-base font-normal leading-normal">
-                  ©2025 EduConnect. All rights reserved.
+                </summary>
+                <p class="text-[#60728a] text-sm font-normal leading-normal pb-2">
+                Most Indian universities require proficiency in English, often demonstrated through standardized tests like TOEFL or IELTS. Specific requirements vary by
+                institution and program. We can help you identify programs that match your language skills.
                 </p>
-              </div>
-            </div>
-          </footer>    
-      
-          <script src="https://unpkg.com/feather-icons"></script>
-          <script>
-            feather.replace();
-          </script>
+            </details>
+            <details class="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                <p class="text-[#111418] text-sm font-medium leading-normal">How long does the admission process typically take?</p>
+                <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                </div>
+                </summary>
+                <p class="text-[#60728a] text-sm font-normal leading-normal pb-2">
+                Most Indian universities require proficiency in English, often demonstrated through standardized tests like TOEFL or IELTS. Specific requirements vary by
+                institution and program. We can help you identify programs that match your language skills.
+                </p>
+            </details>
+            <details class="flex flex-col rounded-lg border border-[#dbe0e6] bg-white px-[15px] py-[7px] group">
+                <summary class="flex cursor-pointer items-center justify-between gap-6 py-2">
+                <p class="text-[#111418] text-sm font-medium leading-normal">What kind of accommodation support is available?</p>
+                <div class="text-[#111418] group-open:rotate-180" data-icon="CaretDown" data-size="20px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+                    </svg>
+                </div>
+                </summary>
+                <p class="text-[#60728a] text-sm font-normal leading-normal pb-2">
+                Most Indian universities require proficiency in English, often demonstrated through standardized tests like TOEFL or IELTS. Specific requirements vary by
+                institution and program. We can help you identify programs that match your language skills.
+                </p>
+            </details>
         </div>
     </div>
+    </div>
+
+    <footer class="flex justify-center w-full" style="background-color: #0d80f2;" id = "footer">
+      <div class="flex max-w-[960px] flex-1 flex-col">
+        <div class="flex flex-col items-center justify-between h-full px-5 py-10 text-center @container gap-6">    
+          <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+            <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+            <a class="text-white text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+          </div>
+          <form action="" class="flex flex-col items-center gap-4 w-full">
+            <input 
+              type="text" 
+              placeholder="enter your email" 
+              class="w-full max-w-[480px] h-10 px-4 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
+            />
+            <textarea 
+              placeholder="email us here..." 
+              class="w-full max-w-[480px] h-24 px-4 py-2 rounded-lg bg-white text-[#111418] text-sm font-normal leading-normal placeholder:text-[#60758a]"
+            ></textarea>
+            <button 
+              type="submit" 
+              class="w-full max-w-[480px] h-10 bg-[#0b6fd1] hover:bg-[#0959a8] text-white font-medium rounded-lg transition"
+            >
+              Send
+            </button>
+          </form>
+          <div class="flex justify-center gap-6 mt-4 text-white">
+            <a href="https://wa.me/1234567890" target="_blank"><i data-feather="message-circle"></i></a>
+            <a href="tel:+1234567890"><i data-feather="phone"></i></a>
+            <a href="mailto:example@email.com"><i data-feather="mail"></i></a>
+          </div>
+          <p class="text-white text-base font-normal leading-normal">
+            ©2025 AISSC. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
